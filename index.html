@@ -17,35 +17,50 @@
         
         let animalsArray = [
         {
-            name: "Monster",
+            name: "Monster1",
             imgUrl: "monster1.png"
         },
         {
-            name: "Monster",
+            name: "Monster2",
             imgUrl: "monster2.png"
         },
         {
-            name: "Monster",
+            name: "Monster3",
             imgUrl: "monster3.png"
         },
         {
-            name: "Monster",
+            name: "Monster4",
             imgUrl: "monster4.png"
         },
         {
-            name: "Monster",
+            name: "Monster5",
             imgUrl: "monster5.png"
         },
 
         ]
 
         const getRandomAnimal = () => {
-            let randomAnimal = Math.floor(Math.floor()* animalsArray.length);
-            //animalsArray[randomAnimal]
-            const display = document.createElement('img')
-            display.src = animalsArray
+    let randomAnimal = Math.floor(Math.random() * animalsArray.length);
+    createAnimalCard(animalsArray[randomAnimal]);
+}
+
+
+        const createAnimalCard = (animal) => {
+            const animalDisplay = document.createElement('div');
+            const animalImage = document.createElement('img')
+            animalImage.src = `${animal.imgUrl}`
+            const animalName = document.createElement("h1")
+            animalName.innerHTML = animal.name
+
+            animalDisplay.append(animalImage, animalName)
+            animalsContainer.append(animalDisplay)
         }
 
+        const generateRandomColor = () => {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+}
 
 
         showBtn.addEventListener("click",getRandomAnimal)
