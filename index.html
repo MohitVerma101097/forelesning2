@@ -14,6 +14,7 @@
     <script>
         const showBtn = document.querySelector("#show-btn");
         const animalsContainer = document.querySelector("#animals-container")
+        
         let animalsArray = [
         {
             name: "Monster",
@@ -36,16 +37,20 @@
             imgUrl: "monster5.png"
         },
 
+        ]
+
         const getRandomAnimal = () => {
             let randomAnimal = Math.floor(Math.floor()* animalsArray.length);
-
+            //animalsArray[randomAnimal]
+            const display = document.createElement('img')
+            display.src = animalsArray
         }
 
-        
+
 
         showBtn.addEventListener("click",getRandomAnimal)
 
-        ]
+       
     </script>
 </body>
 
